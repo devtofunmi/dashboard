@@ -83,7 +83,7 @@ export default function ProjectDetailsPage() {
 
   if (!project) {
     return (
-      <main className="min-h-screen bg-gray-950 text-white p-6 flex flex-col items-center justify-center">
+      <main className="min-h-screen bg-[#151515] text-white p-6 flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold mb-4">Project not found</h1>
         <Link href="/dashboard" className="text-blue-500 underline">
           Back to Dashboard
@@ -93,17 +93,21 @@ export default function ProjectDetailsPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-950 text-white p-6 space-y-6 max-w-4xl mx-auto">
-      <Link href="/dashboard" className="text-blue-500 underline">
-        ← Back to Dashboard
+    <main className="min-h-screen bg-[#151515] text-white p-6 space-y-6 ">
+      <div className="max-w-4xl mx-auto w-full">
+        <Link href="/dashboard" className="text-blue-500 underline">
+        ←
       </Link>
-
-      <h1 className="text-4xl font-bold">{project.name}</h1>
+      <div className="flex justify-between text-center mt-5 items-center">
+        <h1 className="md:text-4xl text-2xl font-bold mt-5">{project.name}</h1>
       <span
-        className={`inline-block px-3 py-1 rounded text-white text-sm ${statusColor[project.status]}`}
+        className={`inline-block px-3 py-1  rounded text-white text-sm ${statusColor[project.status]}`}
       >
         {project.status}
       </span>
+      </div>
+
+      
 
       <p className="mt-2 text-gray-400">Last updated: {project.updated}</p>
       <p className="mt-2">📝 {project.notes}</p>
@@ -131,7 +135,7 @@ export default function ProjectDetailsPage() {
         )}
       </div>
 
-      <section className="mt-12 bg-gray-900 p-6 rounded-lg">
+      <section className="mt-12 bg-[#222222] p-6 rounded-lg">
         <h2 className="text-2xl font-semibold mb-4">Analytics (Mock Data)</h2>
         <ul className="space-y-2">
           <li>
@@ -149,6 +153,7 @@ export default function ProjectDetailsPage() {
           </li>
         </ul>
       </section>
+      </div>
     </main>
   );
 }
