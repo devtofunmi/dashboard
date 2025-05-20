@@ -52,7 +52,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
             <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 cursor-pointer rounded-md bg-gray-700 hover:bg-gray-600"
+            className="px-4 py-2 cursor-pointer rounded-md bg-gray-700 hover:bg-gray-600 "
           >
             X
           </button>
@@ -64,7 +64,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full p-2 mt-10 rounded bg-[#222222] border  focus:outline-none"
+          className="w-full p-2 mt-10 rounded bg-[#222222] border  focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <select
@@ -85,7 +85,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           value={updated}
           onChange={(e) => setUpdated(e.target.value)}
           required
-          className="w-full p-2 rounded bg-[#222222] border focus:outline-none"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <input
@@ -93,7 +93,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           placeholder="Live URL (optional)"
           value={live}
           onChange={(e) => setLive(e.target.value)}
-          className="w-full p-2 rounded bg-[#222222] border focus:outline-none"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <input
@@ -101,7 +101,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           placeholder="GitHub URL (optional)"
           value={github}
           onChange={(e) => setGithub(e.target.value)}
-          className="w-full p-2 rounded bg-[#222222] border focus:outline-none"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <textarea
@@ -109,7 +109,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           rows={3}
-          className="w-full p-2 rounded bg-[#222222] border focus:outline-none"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <div className="">
@@ -118,7 +118,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
             type="submit"
             className="px-8 py-2 w-full cursor-pointer rounded-md bg-blue-600 hover:bg-blue-700 text-white"
           >
-            Add
+            Submit
           </button>
         </div>
       </form>
