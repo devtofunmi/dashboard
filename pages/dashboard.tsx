@@ -55,14 +55,14 @@ const DashboardPage = () => {
   const addProject = (project: Project) => setProjects((prev) => [...prev, project]);
 
   return (
-    <main className="min-h-screen bg-gray-950 text-white p-6 space-y-6">
+    <main className="min-h-screen bg-[#151515] text-white p-6 space-y-6">
       <AdminInfo />
 
       <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold">📁 Project Dashboard</h1>
+        <h1 className="md:text-3xl text-xl font-bold">📁 Project Dashboard</h1>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+          className="bg-blue-600 hover:bg-blue-700 cursor-pointer px-4 py-2 rounded-md"
         >
           + Add Project
         </button>
