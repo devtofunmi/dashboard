@@ -31,7 +31,7 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-950 text-white p-6">
+    <main className="min-h-screen flex items-center justify-center bg-[#151515] text-white p-6">
       <form
         onSubmit={handleSubmit}
         className="p-8 w-full max-w-md space-y-6"
@@ -49,7 +49,7 @@ export default function LoginPage() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-            className="w-full px-3 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -62,7 +62,7 @@ export default function LoginPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="w-full px-3 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -70,7 +70,7 @@ export default function LoginPage() {
           type="submit"
           className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
         >
-          Log In
+          L og In
         </button>
       </form>
     </main>
