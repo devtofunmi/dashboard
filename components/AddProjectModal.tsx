@@ -46,9 +46,17 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-      <form onSubmit={handleSubmit} className="bg-gray-900 p-6 rounded-lg w-full max-w-md space-y-4">
-        <h3 className="text-xl font-semibold">Add New Project</h3>
+    <div className="fixed inset-0 bg-black/50 bg-opacity-70 flex items-center justify-center z-50">
+      <form onSubmit={handleSubmit} className="relative bg-[#151515] p-6 rounded-lg w-11/12 max-w-lg space-y-4">
+        <div className="absolute top-2 right-2">
+            <button
+            type="button"
+            onClick={onClose}
+            className="px-4 py-2 cursor-pointer rounded-md bg-gray-700 hover:bg-gray-600"
+          >
+            X
+          </button>
+        </div>
 
         <input
           type="text"
@@ -56,13 +64,13 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:outline-none"
+          className="w-full p-2 mt-10 rounded bg-[#222222] border  focus:outline-none"
         />
 
         <select
           value={status}
           onChange={(e) => setStatus(e.target.value as ProjectStatus)}
-          className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:outline-none"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none"
         >
           {["Launched", "In Dev", "Testing", "Idea"].map((status) => (
             <option key={status} value={status}>
@@ -77,7 +85,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           value={updated}
           onChange={(e) => setUpdated(e.target.value)}
           required
-          className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:outline-none"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none"
         />
 
         <input
@@ -85,7 +93,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           placeholder="Live URL (optional)"
           value={live}
           onChange={(e) => setLive(e.target.value)}
-          className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:outline-none"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none"
         />
 
         <input
@@ -93,7 +101,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           placeholder="GitHub URL (optional)"
           value={github}
           onChange={(e) => setGithub(e.target.value)}
-          className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:outline-none"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none"
         />
 
         <textarea
@@ -101,20 +109,14 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           rows={3}
-          className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:outline-none"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none"
         />
 
-        <div className="flex justify-end gap-4">
-          <button
-            type="button"
-            onClick={onClose}
-            className="px-4 py-2 rounded bg-gray-700 hover:bg-gray-600"
-          >
-            Cancel
-          </button>
+        <div className="">
+          
           <button
             type="submit"
-            className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-white"
+            className="px-8 py-2 w-full cursor-pointer rounded-md bg-blue-600 hover:bg-blue-700 text-white"
           >
             Add
           </button>
