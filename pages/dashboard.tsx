@@ -59,7 +59,7 @@ const DashboardPage = () => {
       <AdminInfo />
 
       <div className="flex justify-between items-center">
-        <h1 className="md:text-3xl text-xl font-bold">📁 Project Dashboard</h1>
+        <h1 className="md:text-3xl text-xl font-bold">📁</h1>
         <button
           onClick={() => setIsModalOpen(true)}
           className="bg-blue-600 hover:bg-blue-700 cursor-pointer px-4 py-2 rounded-md"
