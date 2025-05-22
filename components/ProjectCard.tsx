@@ -26,7 +26,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <div
       onClick={() => window.location.href = `/${project.id}`}
-      className="bg-[#222222] rounded-xl shadow p-4 space-y-3 block hover:ring-2 ring-blue-600 transition cursor-pointer"
+      className="bg-[#222222] rounded-xl shadow p-4 space-y-3 block hover:ring-2 ring-purple-600 transition cursor-pointer"
       role="link"
       tabIndex={0}
       onKeyDown={(e) => {
