@@ -3,6 +3,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import React from "react";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 type ProjectStatus = "Launched" | "In Dev" | "Testing" | "Idea";
 
@@ -73,8 +74,8 @@ export default function ProjectDetailsPage() {
   // While waiting for param (on first render in client), show loading
   if (!projectName || typeof projectName !== "string") {
     return (
-      <main className="min-h-screen bg-gray-950 text-white p-6 flex flex-col items-center justify-center">
-        <p className="text-xl">Loading...</p>
+      <main className="min-h-screen bg-[#151515] text-white p-6 flex flex-col items-center justify-center">
+        <LoadingSpinner />
       </main>
     );
   }
