@@ -14,7 +14,7 @@ const defaultProjects: Project[] = [
     status: "Launched",
     updated: "May 2025",
     live: "https://prettybio.up.railway.app",
-    github: "https://github.com/your-username/prettybio",
+    github: "https://github.com/devtofunmi/prettybio",
     notes: "Add new themes",
   },
   {
@@ -22,7 +22,7 @@ const defaultProjects: Project[] = [
     name: "LaunchHunt",
     status: "In Dev",
     updated: "May 2025",
-    github: "https://github.com/your-username/launchhunt",
+    github: "https://github.com/devtofunmi/launchhunt",
     notes: "Working on search",
   },
   {
@@ -30,7 +30,7 @@ const defaultProjects: Project[] = [
     name: "FlashPrompt",
     status: "Testing",
     updated: "April 2025",
-    github: "https://github.com/your-username/flashprompt",
+    github: "https://github.com/devtofunmi/flashprompt",
     notes: "Improve prompt UX",
   },
   {
@@ -38,6 +38,7 @@ const defaultProjects: Project[] = [
     name: "Lockit",
     status: "Idea",
     updated: "-",
+    github: "https://github.com/devtofunmi/lockit",
     notes: "Think about encryption UI",
   },
 ];
@@ -62,7 +63,7 @@ const DashboardPage = () => {
         <h1 className="md:text-3xl text-xl font-bold">📁</h1>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-blue-600 hover:bg-blue-700 cursor-pointer px-4 py-2 rounded-md"
+          className="bg-blue-600 hover:bg-blue-700 cursor-pointer px-4 py-2 rounded-full"
         >
           + Add Project
         </button>
