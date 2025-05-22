@@ -47,7 +47,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
 
   return (
     <div className="fixed inset-0 bg-black/50 bg-opacity-70 flex items-center justify-center z-50">
-      <form onSubmit={handleSubmit} className="relative bg-[#151515] p-6 rounded-lg w-11/12 max-w-lg space-y-4">
+      <form onSubmit={handleSubmit} className="relative bg-[#0e0e0e] p-6 rounded-lg w-11/12 max-w-lg space-y-4">
         <div className="absolute top-2 right-2">
             <button
             type="button"
@@ -64,7 +64,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full p-2 mt-10 rounded bg-[#222222] border  focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 mt-10 rounded bg-[#222222] border  focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
 
         <select
@@ -85,7 +85,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           value={updated}
           onChange={(e) => setUpdated(e.target.value)}
           required
-          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
 
         <input
@@ -93,7 +93,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           placeholder="Live URL (optional)"
           value={live}
           onChange={(e) => setLive(e.target.value)}
-          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
 
         <input
@@ -101,7 +101,7 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           placeholder="GitHub URL (optional)"
           value={github}
           onChange={(e) => setGithub(e.target.value)}
-          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
 
         <textarea
@@ -109,14 +109,14 @@ const AddProjectModal: React.FC<AddProjectModalProps> = ({ isOpen, onClose, onAd
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           rows={3}
-          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 rounded bg-[#222222] border focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
 
         <div className="">
           
           <button
             type="submit"
-            className="px-8 py-2 w-full cursor-pointer rounded-md bg-blue-600 hover:bg-blue-700 text-white"
+            className="px-8 py-2 w-full cursor-pointer rounded-md bg-purple-600 hover:bg-purple-700 text-white"
           >
             Submit
           </button>
