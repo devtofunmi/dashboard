@@ -74,7 +74,7 @@ export default function ProjectDetailsPage() {
   // While waiting for param (on first render in client), show loading
   if (!projectName || typeof projectName !== "string") {
     return (
-      <main className="min-h-screen bg-[#151515] text-white p-6 flex flex-col items-center justify-center">
+      <main className="min-h-screen bg-[#0e0e0e] text-white p-6 flex flex-col items-center justify-center">
         <LoadingSpinner />
       </main>
     );
@@ -84,7 +84,7 @@ export default function ProjectDetailsPage() {
 
   if (!project) {
     return (
-      <main className="min-h-screen bg-[#151515] text-white p-6 flex flex-col items-center justify-center">
+      <main className="min-h-screen bg-[#0e0e0e] text-white p-6 flex flex-col items-center justify-center">
         <h1 className="text-3xl font-bold mb-4">Project not found</h1>
         <Link href="/dashboard" className="text-blue-500 underline">
           Back to Dashboard
@@ -94,7 +94,7 @@ export default function ProjectDetailsPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#151515] text-white p-6 space-y-6 ">
+    <main className="min-h-screen bg-[#0e0e0e] text-white p-6 space-y-6 ">
       <div className="max-w-4xl mx-auto w-full">
         <Link href="/dashboard" className="text-blue-500 underline">
         ←
