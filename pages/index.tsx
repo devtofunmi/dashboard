@@ -1,7 +1,9 @@
 import Image from "next/image";
-// import { Geist, Geist_Mono } from "next/font/google";
-import DashboardPage from "./dashboard";
 import LoginPage from "./login";
+import LandingPage from "./landingpage";
+// import { Geist, Geist_Mono } from "next/font/google";
+
+
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -18,7 +20,10 @@ export default function Home() {
     <div
       
     >
-      <LoginPage />
+      {/* <LoginPage /> */}
+      <LandingPage />
+      
+
     </div>
-  );
+  )
 }
