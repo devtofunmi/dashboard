@@ -30,7 +30,7 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-[#0e0e0e] text-white px-4 py-10">
+    <main className="min-h-screen flex items-start md:items-center justify-center bg-[#0e0e0e] text-white px-4 py-10">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md p-8 rounded-xl shadow-xl space-y-6"

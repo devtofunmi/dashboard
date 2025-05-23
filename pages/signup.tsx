@@ -26,7 +26,12 @@ export default function SignupPage() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-[#0e0e0e] text-white px-4 py-10">
+    <main className="min-h-screen flex flex-col items-start md:items-center justify-center bg-[#0e0e0e] text-white px-4 py-1">
+        <nav
+        className="sticky w-full top-0 z-50 px-5 py-4 text-2xl font-bold transition-all backdrop-blur-md bg-[#0e0e0e]/60"
+      >
+        A d m<br /> i n<span className="text-purple-500">.</span>
+      </nav>
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md  p-8 rounded-xl shadow-xl space-y-6"
