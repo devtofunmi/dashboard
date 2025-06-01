@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import Navbar from "@/components/Navbar";
 
 const testimonials = [
   {
@@ -25,7 +26,6 @@ const testimonials = [
 
 export default function LandingPage() {
   const [index, setIndex] = useState(0);
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,24 +34,12 @@ export default function LandingPage() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+ 
 
   return (
     <div className="min-h-screen bg-[#0e0e0e] text-white font-sans">
       {/* Navbar */}
-      <nav
-        className={`sticky top-0 z-50 px-5 py-4 text-2xl font-bold transition-all backdrop-blur-md bg-[#0e0e0e]/60 ${
-          scrolled ? "shadow-lg shadow-black/30 border-b border-white/10" : ""
-        }`}
-      >
-        A d m<br /> i n<span className="text-purple-500">.</span>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <main className="flex flex-col items-center justify-center px-6 py-12 text-center">
