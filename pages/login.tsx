@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -30,10 +31,12 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen flex items-start md:items-center justify-center bg-[#0e0e0e] text-white px-4 py-10">
-      <form
+    <main >
+      <Navbar />
+      <div className="min-h-screen flex items-start md:items-center justify-center bg-[#0e0e0e] text-white px-4 py-10">
+        <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md p-8 rounded-xl shadow-xl space-y-6"
+        className="w-full mt-10 max-w-md p-8 rounded-xl shadow-xl space-y-6"
       >
         <div className="text-center">
           <h1 className="text-3xl font-bold text-purple-500">Welcome Chairman!</h1>
@@ -89,6 +92,8 @@ export default function LoginPage() {
           </Link>
         </div>
       </form>
+      </div>
+      
     </main>
   );
 }
